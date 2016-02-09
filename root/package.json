@@ -1,0 +1,8 @@
+{
+  "name": "<%= S(name).dasherize().value() %>",
+  "description": "<%= description %>",
+  "dependencies": {
+    "autoprefixer": "6.x",
+    "precss": "1.x"
+  }
+}
