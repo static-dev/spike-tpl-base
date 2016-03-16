@@ -4,8 +4,15 @@
   "dependencies": {
     "babel-preset-es2015": "6.x",
     "babel-preset-stage-2": "6.x",
+<<<<<<< c59d4bcdd0b8d7599c3afcc9dc9904063f0472e4
     "postcss": "^5.0.19",
     "postcss-cssnext": "^2.5.1",
     "rucksack-css": "0.8.x"
+=======
+    "cssnext": "2.x",
+    "lost": "6.x",
+    "rucksack-css": "0.8.x",
+    "sugarss": "0.1.x"
+>>>>>>> update postcss deps
   }
 }
