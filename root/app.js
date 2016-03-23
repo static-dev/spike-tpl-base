@@ -1,9 +1,10 @@
-import autoprefixer from 'autoprefixer'
-import precss from 'precss'
+import cssnext from 'postcss-cssnext'
 import rucksack from 'rucksack-css'
 
 export default {
-  postCssPlugins: [autoprefixer, precss, rucksack],
+  postcss: {
+    plugins: [cssnext, rucksack]
+  },
   babelConfig: { presets: ['es2015', 'stage-2'] },
   locals: { foo: 'bar' },
   ignore: ['**/layout.jade', '**/_*']
