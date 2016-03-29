@@ -1,5 +1,7 @@
 # Roots Mini Base
 
+[![tests](http://img.shields.io/travis/carrot/roots-mini-base/master.svg?style=flat)](https://travis-ci.org/carrot/roots-mini-base)  [![dependencies](http://img.shields.io/gemnasium/carrot/roots-mini-base.svg?style=flat)](https://gemnasium.com/carrot/roots-mini-base)
+
 Base template for latest roots version. Standard carrot stuff.
 
 ## Installation
