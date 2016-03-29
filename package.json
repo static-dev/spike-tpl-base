@@ -1,12 +1,15 @@
 {
   "name": "roots-mini-base",
-  "version": "0.0.0",
   "description": "Base template for latest roots version",
-  "scripts": {
-    "test": "ava test/test.js"
+  "version": "0.0.0",
+  "author": "Carrot Creative",
+  "ava": {
+    "require": [
+      "babel-core/register"
+    ],
+    "verbose": "true"
   },
-  "author": "",
-  "license": "MIT",
+  "bugs": "https://github.com/carrot/roots-mini-base/issues",
   "devDependencies": {
     "ava": "0.13.x",
     "babel-core": "^6.7.2",
@@ -15,10 +18,17 @@
     "roots-mini": "0.0.9",
     "sprout": "1.x"
   },
-  "ava": {
-    "require": [
-      "babel-core/register"
-    ],
-    "verbose": "true"
+  "homepage": "https://github.com/carrot/roots-mini-base",
+  "keywords": [
+    "roots",
+    "roots-mini",
+    "sprout",
+    "sprout-template"
+  ],
+  "license": "MIT",
+  "main": "root/index.html",
+  "repository": "https://github.com/carrot/roots-mini-base",
+  "scripts": {
+    "test": "ava test/test.js"
   }
 }
