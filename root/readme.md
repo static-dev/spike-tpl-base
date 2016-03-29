@@ -2,7 +2,7 @@
 
 <%= description %>
 
-### Setup
+## Setup
 
 - make sure [node.js](http://nodejs.org) is at version >= `4`
 - clone down `carrot/roots-mini` and run `npm link`
