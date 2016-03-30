@@ -16,7 +16,8 @@
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
     "roots-mini": "0.0.9",
-    "sprout": "1.x"
+    "sprout": "1.x",
+    "when": "^3.7.7"
   },
   "homepage": "https://github.com/carrot/roots-mini-base",
   "keywords": [
