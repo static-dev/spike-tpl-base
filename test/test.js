@@ -8,9 +8,14 @@ import W from 'when'
 import node from 'when/node'
 import {exec} from 'child_process'
 
+const tplTestPath = path.join(__dirname, 'example')
+
+test.cb.before((t) => {
+  rimraf(tplTestPath, () => { t.end() })
+})
+
 test('initializes with sprout, compiles with roots', t => {
   const tplName = 'roots-mini-base-test'
-  const tplTestPath = path.join(__dirname, 'example')
   const locals = { name: 'doge', description: 'wow', github_username: 'amaze' }
   const sprout = new Sprout(tmpdir())
 

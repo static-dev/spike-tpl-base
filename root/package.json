@@ -8,12 +8,25 @@
     "babel-preset-es2015": "6.x",
     "babel-preset-stage-2": "6.x",
     "lost": "6.x",
-    "postcss-cssnext": "^2.5.1",
+    "postcss-cssnext": "2.5.x",
     "rucksack-css": "0.8.x",
-    "sugarss": "0.1.x"
+    "sugarss": "0.1.x",
+    "roots-mini": "0.0.x"
+  },
+  "devDependencies": {
+    "ava": "0.13.x",
+    "rimraf": "2.5.x",
+    "snazzy": "3.0.x",
+    "standard": "6.0.x"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).dasherize().value() %>",
   "main": "app.js",
   "private": "true",
-  "repository": "https://github.com/<%= github_username %>/<%= S(name).dasherize().value() %>"
+  "repository": "https://github.com/<%= github_username %>/<%= S(name).dasherize().value() %>",
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "precommit": "npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava --require babel-core/register"
+  }
 }
