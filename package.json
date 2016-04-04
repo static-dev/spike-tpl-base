@@ -15,7 +15,7 @@
     "babel-core": "^6.7.2",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "roots-mini": "0.0.9",
+    "roots-mini": "0.0.13",
     "sprout": "1.x",
     "when": "^3.7.7"
   },
