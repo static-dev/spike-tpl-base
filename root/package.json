@@ -20,7 +20,7 @@
     "sugarss": "0.1.x"
   },
   "devDependencies": {
-    "ava": "0.13.x",
+    "ava": "0.14.x",
     "rimraf": "2.5.x",
     "snazzy": "3.0.x",
     "standard": "6.0.x"
