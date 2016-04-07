@@ -10,9 +10,10 @@ test.cb.before((t) => {
 })
 
 test('compiles project with roots-mini', (t) => {
+  const project = new Roots({ root: p })
   return new Promise((resolve, reject) => {
-    const project = new Roots({ root: p })
     project.on('error', reject)
+    project.on('warning', reject)
     project.on('compile', resolve)
     project.compile()
   })
