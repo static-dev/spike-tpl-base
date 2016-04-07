@@ -11,11 +11,11 @@
   },
   "bugs": "https://github.com/carrot/roots-mini-base/issues",
   "devDependencies": {
-    "ava": "0.13.x",
+    "ava": "^0.14.0",
     "babel-core": "^6.7.2",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "roots-mini": "0.0.13",
+    "roots-mini": "0.0.15",
     "sprout": "1.x",
     "when": "^3.7.7"
   },
