@@ -10,5 +10,5 @@ export default {
   },
   babelConfig: { presets: ['es2015', 'stage-2'] },
   locals: { foo: 'bar' },
-  ignore: ['**/layout.jade', '**/_*']
+  ignore: ['**/layout.jade', '**/_*', '**/.*']
 }
