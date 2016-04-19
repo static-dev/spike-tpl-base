@@ -15,7 +15,6 @@
     "babel-preset-stage-2": "6.x",
     "lost": "6.x",
     "postcss-cssnext": "2.5.x",
-    "roots-mini": "0.0.x",
     "rucksack-css": "0.8.x",
     "sugarss": "0.1.x"
   },
