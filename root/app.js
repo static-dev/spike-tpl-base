@@ -1,9 +1,9 @@
-import cssnext from 'postcss-cssnext'
-import rucksack from 'rucksack-css'
-import sugarss from 'sugarss'
-import lost from 'lost'
+const cssnext = require('postcss-cssnext')
+const rucksack = require('rucksack-css')
+const sugarss = require('sugarss')
+const lost = require('lost')
 
-export default {
+module.exports = {
   postcss: {
     plugins: [cssnext, rucksack, lost],
     parser: sugarss
