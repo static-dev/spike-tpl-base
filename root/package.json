@@ -4,9 +4,6 @@
   "version": "0.0.1",
   "author": "Carrot Creative",
   "ava": {
-    "require": [
-      "babel-core/register"
-    ],
     "verbose": "true"
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
@@ -22,7 +19,7 @@
     "ava": "0.14.x",
     "rimraf": "2.5.x",
     "snazzy": "3.0.x",
-    "standard": "6.0.x"
+    "standard": "7.x"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",

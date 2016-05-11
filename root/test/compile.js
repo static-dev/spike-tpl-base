@@ -1,7 +1,7 @@
-import test from 'ava'
-import path from 'path'
-import rimraf from 'rimraf'
-import Roots from 'roots-mini'
+const test = require('ava')
+const path = require('path')
+const rimraf = require('rimraf')
+const Roots = require('roots-mini')
 
 const p = path.join(__dirname, '..')
 
