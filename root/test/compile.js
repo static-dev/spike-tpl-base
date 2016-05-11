@@ -1,7 +1,7 @@
 const test = require('ava')
 const path = require('path')
 const rimraf = require('rimraf')
-const Roots = require('roots-mini')
+const Spike = require('spike')
 
 const p = path.join(__dirname, '..')
 
@@ -9,8 +9,8 @@ test.cb.before((t) => {
   rimraf(path.join(p, 'public'), () => { t.end() })
 })
 
-test('compiles project with roots-mini', (t) => {
-  const project = new Roots({ root: p })
+test('compiles project with spike', (t) => {
+  const project = new Spike({ root: p })
   return new Promise((resolve, reject) => {
     project.on('error', reject)
     project.on('warning', reject)

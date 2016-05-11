@@ -1,7 +1,7 @@
 import path from 'path'
 import test from 'ava'
 import Sprout from 'sprout'
-import Roots from 'roots-mini'
+import Spike from 'spike'
 import rimraf from 'rimraf-promise'
 import tmpdir from 'os-tmpdir'
 import W from 'when'
@@ -14,8 +14,8 @@ test.cb.before((t) => {
   rimraf(tplTestPath, () => { t.end() })
 })
 
-test('initializes with sprout, compiles with roots', t => {
-  const tplName = 'roots-mini-base-test'
+test('initializes with sprout, compiles with spike', t => {
+  const tplName = 'spike-base-test'
   const locals = { name: 'doge', description: 'wow', github_username: 'amaze' }
   const sprout = new Sprout(tmpdir())
 
@@ -26,10 +26,10 @@ test('initializes with sprout, compiles with roots', t => {
     .then(sprout.init.bind(sprout, tplName, tplTestPath, { locals: locals }))
     .tap(() => console.log('installing dependencies...'))
     .then(npmInstall.bind(null, tplTestPath))
-    .tap(() => console.log('compiling with roots...'))
+    .tap(() => console.log('compiling with spike...'))
     .then(() => {
       return W.promise((resolve, reject) => {
-        const project = new Roots({ root: tplTestPath })
+        const project = new Spike({ root: tplTestPath })
         project.on('error', reject)
         project.on('compile', resolve)
         project.compile()

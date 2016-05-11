@@ -1,6 +1,6 @@
 {
-  "name": "roots-mini-base",
-  "description": "Base template for latest roots version",
+  "name": "spike-base",
+  "description": "Base template for latest spike version",
   "version": "0.0.0",
   "author": "Carrot Creative",
   "ava": {
@@ -9,27 +9,27 @@
     ],
     "verbose": "true"
   },
-  "bugs": "https://github.com/carrot/roots-mini-base/issues",
+  "bugs": "https://github.com/static-dev/spike-base/issues",
   "devDependencies": {
     "ava": "^0.14.0",
     "babel-core": "^6.7.2",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "roots-mini": "0.0.x",
+    "spike": "0.0.x",
     "sprout": "1.x",
     "when": "^3.7.7"
   },
-  "homepage": "https://github.com/carrot/roots-mini-base",
+  "homepage": "https://github.com/static-dev/spike-base",
   "keywords": [
-    "roots",
-    "roots-mini",
+    "spike",
     "sprout",
-    "sprout-template"
+    "sprout-template",
+    "static-dev"
   ],
   "license": "MIT",
-  "main": "root/index.html",
-  "repository": "https://github.com/carrot/roots-mini-base",
+  "main": "init.js",
+  "repository": "https://github.com/static-dev/spike-base",
   "scripts": {
-    "test": "ava test/test.js"
+    "test": "ava"
   }
 }
