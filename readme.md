@@ -1,6 +1,6 @@
 # Spike - Base Template
 
-[![tests](http://img.shields.io/travis/static-dev/spike-base/master.svg?style=flat)](https://travis-ci.org/spike-base/spike-base)  [![dependencies](http://img.shields.io/gemnasium/static-dev/spike-base.svg?style=flat)](https://gemnasium.com/static-dev/spike-base)
+[![tests](http://img.shields.io/travis/static-dev/spike-base/master.svg?style=flat)](https://travis-ci.org/spike-base/spike-base)  [![dependencies](http://img.shields.io/david/static-dev/spike-base.svg?style=flat)](https://david-dm.org/static-dev/spike-base)
 
 Base template for latest [spike](https://github.com/static-dev/spike) version. Standard [carrot](https://github.com/carrot) stuff.
 
