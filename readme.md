@@ -6,7 +6,7 @@ Base template for latest [spike](https://github.com/static-dev/spike) version. S
 
 ## Installation
 
-It is installed by default in spike, just create a new project with `spike new` and it will be there. For standalone installation:
+It is installed by default in [spike](https://github.com/static-dev/spike), just create a new project with `spike new` and it will be there. For standalone installation:
 
 - `npm install sprout-cli -g`
 - `sprout add spike-base git@github.com:static-dev/spike-base.git`
