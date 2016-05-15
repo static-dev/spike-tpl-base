@@ -15,7 +15,7 @@
     "babel-core": "^6.7.2",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "spike": "0.2.x",
+    "spike-core": "0.2.x",
     "sprout": "1.x",
     "when": "^3.7.7"
   },
