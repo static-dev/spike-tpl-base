@@ -8,7 +8,7 @@ module.exports = {
     plugins: [cssnext, rucksack, lost],
     parser: sugarss
   },
-  babelConfig: { presets: ['es2015', 'stage-2'] },
+  babel: { presets: ['es2015', 'stage-2'] },
   locals: { foo: 'bar' },
   ignore: ['**/layout.jade', '**/_*', '**/.*']
 }

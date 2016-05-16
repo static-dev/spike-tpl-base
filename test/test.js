@@ -1,12 +1,12 @@
-import path from 'path'
-import test from 'ava'
-import Sprout from 'sprout'
-import Spike from 'spike-core'
-import rimraf from 'rimraf-promise'
-import tmpdir from 'os-tmpdir'
-import W from 'when'
-import node from 'when/node'
-import {exec} from 'child_process'
+const path = require('path')
+const test = require('ava')
+const Sprout = require('sprout')
+const Spike = require('spike-core')
+const rimraf = require('rimraf-promise')
+const tmpdir = require('os-tmpdir')
+const W = require('when')
+const node = require('when/node')
+const {exec} = require('child_process')
 
 const tplTestPath = path.join(__dirname, 'example')
 
