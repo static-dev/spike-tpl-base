@@ -4,19 +4,15 @@
   "version": "0.0.0",
   "author": "Carrot Creative",
   "ava": {
-    "require": [
-      "babel-core/register"
-    ],
     "verbose": "true"
   },
   "bugs": "https://github.com/static-dev/spike-base/issues",
   "devDependencies": {
     "ava": "^0.14.0",
-    "babel-core": "^6.7.2",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "spike-core": "0.2.x",
-    "sprout": "1.x",
+    "spike-core": "^0.3.0",
+    "sprout": "^1.2.0",
     "when": "^3.7.7"
   },
   "homepage": "https://github.com/static-dev/spike-base",
