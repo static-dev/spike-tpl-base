@@ -11,8 +11,8 @@
     "ava": "^0.14.0",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "spike-core": "^0.3.0",
-    "sprout": "^1.2.0",
+    "spike-core": "0.3.x",
+    "sprout": "1.x",
     "when": "^3.7.7"
   },
   "homepage": "https://github.com/static-dev/spike-base",
