@@ -1,6 +1,28 @@
 extends layout
 
 block content
-  h3 Hello World!
+  h2 Hello World!
   p Thanks for using <a href="https://github.com/static-dev/spike">spike</a>
   p Example of locals: #{foo}
+
+  hr
+  
+  h3 Getting Started
+  h4 The Stack:
+  ul
+    li
+      a(href="https://jade-lang.com") jade
+      |  for markup
+    li
+      a(href="https://babeljs.io/") babel
+      |  for JS transforms
+    li
+      a(href="http://postcss.org/") postcss
+      |  for CSS
+    li
+      a(href="http://webpack.github.io") webpack
+      |  for JS bundling
+    
+  p Customize your project's settings by editing your 
+    a(href="https://github.com/static-dev/spike#appjs") app.js
+    |  file, or simply start by editing this view
