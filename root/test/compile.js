@@ -1,7 +1,7 @@
 const test = require('ava')
 const path = require('path')
 const rimraf = require('rimraf')
-const Spike = require('spike')
+const Spike = require('spike-core')
 
 const p = path.join(__dirname, '..')
 
