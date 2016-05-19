@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "ava": "0.14.x",
+    <% if (hosting === true) %>"netlify-cli": "*",%>
     "rimraf": "2.5.x",
     "snazzy": "3.0.x",
     "spike-core": "0.3.x",
@@ -27,6 +28,8 @@
   "private": "true",
   "repository": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "scripts": {
+    <% if (hosting === true) %>"netlify": "node_modules/.bin/netlify init",
+    "deploy": "node_modules/.bin/netlify deploy",%>
     "lint": "standard --verbose | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
