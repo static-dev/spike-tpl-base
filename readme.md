@@ -26,3 +26,4 @@ This is the default template for use within [spike](https://github.com/static-de
 - **name** (name of template)
 - **description** (a short description of the template)
 - **github_username** (name of github user)
+- **hosting** (set up [netlify](https://netlify.com/) hosting?)
