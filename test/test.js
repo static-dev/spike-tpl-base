@@ -20,7 +20,7 @@ test('initializes with sprout, compiles with spike', t => {
     name: 'doge',
     description: 'wow',
     github_username: 'amaze',
-    deploy: false
+    hosting: false
   }
   const sprout = new Sprout(tmpdir())
 
