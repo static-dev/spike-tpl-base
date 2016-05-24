@@ -1,6 +1,6 @@
 # Spike - Base Template
 
-[![tests](http://img.shields.io/travis/static-dev/spike-base/master.svg?style=flat)](https://travis-ci.org/spike-base/spike-base) [![dependencies](http://david-dm.org/static-dev/spike-base.svg?path=root)](https://david-dm.org/static-dev/spike-base?path=root)
+[![tests](http://img.shields.io/travis/static-dev/spike-tpl-base/master.svg?style=flat)](https://travis-ci.org/spike-tpl-base/spike-tpl-base) [![dependencies](http://david-dm.org/static-dev/spike-tpl-base.svg?path=root)](https://david-dm.org/static-dev/spike-tpl-base?path=root)
 
 The base template for the latest [spike](https://github.com/static-dev/spike) version. The features in this template are designed by the [carrot](https://github.com/carrot) tech team.
 
@@ -18,8 +18,8 @@ This is the default template for use within [spike](https://github.com/static-de
 [Spike](https://github.com/static-dev/spike) uses [sprout](https://github.com/carrot/sprout) internally to generate it's project templates. This means you can even use this template without [spike](https://github.com/static-dev/spike) by using [sprout](https://github.com/carrot/sprout) directly.
 
 - `npm i sprout-cli -g`
-- `sprout add spike-base git@github.com:static-dev/spike-base.git`
-- `sprout new spike-base <myproject>`
+- `sprout add spike-tpl-base git@github.com:static-dev/spike-tpl-base.git`
+- `sprout new spike-tpl-base <myproject>`
 
 ## Options
 

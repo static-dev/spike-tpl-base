@@ -1,12 +1,12 @@
 {
-  "name": "spike-base",
+  "name": "spike-tpl-base",
   "description": "Base template for latest spike version",
   "version": "0.0.0",
   "author": "Carrot Creative",
   "ava": {
     "verbose": "true"
   },
-  "bugs": "https://github.com/static-dev/spike-base/issues",
+  "bugs": "https://github.com/static-dev/spike-tpl-base/issues",
   "devDependencies": {
     "ava": "^0.14.0",
     "os-tmpdir": "^1.0.1",
@@ -15,7 +15,7 @@
     "sprout": "1.x",
     "when": "^3.7.7"
   },
-  "homepage": "https://github.com/static-dev/spike-base",
+  "homepage": "https://github.com/static-dev/spike-tpl-base",
   "keywords": [
     "spike",
     "spike-template",
@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "main": "init.js",
-  "repository": "https://github.com/static-dev/spike-base",
+  "repository": "https://github.com/static-dev/spike-tpl-base",
   "scripts": {
     "test": "ava"
   }
