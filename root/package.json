@@ -11,15 +11,16 @@
     "babel-preset-es2015": "6.x",
     "babel-preset-stage-2": "6.x",
     "lost": "6.x",
-    "postcss-cssnext": "2.5.x",
+    "postcss-cssnext": "2.6.x",
     "rucksack-css": "0.8.x",
-    "sugarss": "0.1.x"
+    "sugarss": "0.1.x",
+    "webpack": "0.13.x"
   },
   "devDependencies": {
-    "ava": "0.14.x",
+    "ava": "0.15.x",
     "rimraf": "2.5.x",
-    "snazzy": "3.0.x",
-    "spike-core": "0.5.x",
+    "snazzy": "4.x",
+    "spike-core": "0.6.x",
     "standard": "7.x"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
