@@ -9,5 +9,8 @@ module.exports = {
     new UglifyJsPlugin(),
     new DedupePlugin(),
     new OccurrenceOrderPlugin()
-  ]
+  ],
+  module: {
+    loaders: { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }
+  }
 }

@@ -10,6 +10,7 @@
   "dependencies": {
     "babel-preset-es2015": "6.x",
     "babel-preset-stage-2": "6.x",
+    "image-webpack-loader": "1.x",
     "lost": "6.x",
     "postcss-cssnext": "2.6.x",
     "rucksack-css": "0.8.x",
