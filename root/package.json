@@ -15,7 +15,7 @@
     "postcss-cssnext": "2.6.x",
     "rucksack-css": "0.8.x",
     "sugarss": "0.1.x",
-    "webpack": "0.13.x"
+    "webpack": "1.13.x"
   },
   "devDependencies": {
     "ava": "0.15.x",
