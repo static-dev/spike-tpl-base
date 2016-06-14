@@ -11,7 +11,7 @@
     "ava": "^0.15.2",
     "os-tmpdir": "^1.0.1",
     "rimraf-promise": "^2.0.0",
-    "spike-core": "0.6.2",
+    "spike-core": "0.7.0",
     "sprout": "1.x",
     "when": "^3.7.7"
   },
