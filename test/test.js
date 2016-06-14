@@ -16,7 +16,7 @@ test.cb.before((t) => {
 
 test('initializes with sprout, compiles with spike', t => {
   const tplName = 'spike-tpl-base-test'
-  const locals = { name: 'doge', description: 'wow', github_username: 'amaze' }
+  const locals = { name: 'doge', description: 'wow', github_username: 'amaze', production: false }
   const sprout = new Sprout(tmpdir())
 
   t.plan(1)
