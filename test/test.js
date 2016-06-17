@@ -41,6 +41,33 @@ test('initializes with sprout, compiles with spike', t => {
     })
 })
 
+test.only('compiles with production setting', t => {
+  const tplName = 'spike-tpl-base-production-test'
+  const locals = { name: 'doge', description: 'wow', github_username: 'amaze', production: true }
+  const sprout = new Sprout(tmpdir())
+
+  t.plan(1)
+
+  return sprout.add(tplName, path.resolve(__dirname, '..'))
+    .tap(() => console.log('initializing template...'))
+    .then(sprout.init.bind(sprout, tplName, tplTestPath, { locals: locals }))
+    .tap(() => console.log('installing dependencies...'))
+    .then(npmInstall.bind(null, tplTestPath))
+    .tap(() => console.log('compiling with spike...'))
+    .then(() => {
+      return W.promise((resolve, reject) => {
+        const project = new Spike({ root: tplTestPath, env: 'production' })
+        project.on('error', reject)
+        project.on('compile', resolve)
+        project.compile()
+      })
+    })
+    .then(() => { t.is(true, true) })
+    .finally(() => {
+      return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
+    })
+})
+
 function npmInstall (dir) {
   return node.call(exec, 'npm install', { cwd: dir })
 }

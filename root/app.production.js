@@ -1,7 +1,3 @@
-const webpack = require('webpack')
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
-const DedupePlugin = webpack.optimize.DedupePlugin
-const OccurrenceOrderPlugin = webpack.optimize.OccurrenceOrderPlugin
 const Util = require('spike-util')
 const jade = require('posthtml-jade')
 const minifyHtml = require('posthtml-minifier')
@@ -11,6 +7,10 @@ const cssnext = require('postcss-cssnext')
 const rucksack = require('rucksack-css')
 const cssnano = require('cssnano')
 const lost = require('lost')
+const webpack = require('webpack')
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+const DedupePlugin = webpack.optimize.DedupePlugin
+const OccurrenceOrderPlugin = webpack.optimize.OccurrenceOrderPlugin
 
 module.exports = {
   // disable source maps
@@ -23,20 +23,23 @@ module.exports = {
   ],
   // image optimization
   module: {
-    loaders: { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }
+    loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }]
   },
   // adds html minification plugin
   posthtml: (ctx) => {
     const f = Util.filePathFromLoader(ctx).absolute
     return {
-      defaults: [jade({ filename: f, pretty: true }), minifyHtml()]
+      defaults: [
+        jade({ filename: f, pretty: true }),
+        minifyHtml({ collapseWhitespace: true, removeComments: true })
+      ]
     }
   },
   // adds css minification plugin
   postcss: (ctx) => {
     const atImport = postcssImport({ addDependencyTo: ctx })
     return {
-      plugins: [atImport, cssnext(), rucksack(), lost(), cssnano()],
+      plugins: [atImport, cssnext({ warnForDuplicates: false }), rucksack(), lost(), cssnano()],
       parser: sugarss
     }
   }

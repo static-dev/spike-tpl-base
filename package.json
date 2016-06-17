@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "author": "Carrot Creative",
   "ava": {
-    "verbose": "true"
+    "verbose": "true",
+    "serial": "true"
   },
   "bugs": "https://github.com/static-dev/spike-tpl-base/issues",
   "devDependencies": {
