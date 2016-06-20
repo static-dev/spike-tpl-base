@@ -16,6 +16,6 @@ exports.configure = [
   }
 ]
 
-exports.after = (util) => {
-  if (!util.production) util.target.remove('app.production.js')
+exports.after = (util, config) => {
+  if (!config.production) util.target.remove('app.production.js')
 }
