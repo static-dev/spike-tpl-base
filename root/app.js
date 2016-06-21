@@ -1,5 +1,7 @@
-const Util = require('spike-util')
 const jade = require('posthtml-jade')
+const md = require('posthtml-md')
+const retext = require('posthtml-retext')
+const smartypants = require('retext-smartypants')
 const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
 const cssnext = require('postcss-cssnext')
@@ -15,9 +17,12 @@ module.exports = {
     css: '**/*.sss'
   },
   posthtml: (ctx) => {
-    const f = Util.filePathFromLoader(ctx).absolute
     return {
-      defaults: [jade({ filename: f, pretty: true })]
+      defaults: [
+        jade({ filename: ctx.resourcePath, pretty: true, foo: 'bar' }),
+        md(),
+        retext([smartypants])
+      ]
     }
   },
   postcss: (ctx) => {

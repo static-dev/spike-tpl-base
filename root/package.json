@@ -16,9 +16,11 @@
     "postcss-cssnext": "2.6.x",
     "postcss-import": "8.x",
     "posthtml-jade": "0.8.x",
+    "posthtml-md": "1.x",
     <% if (production) { %>"posthtml-minifier": "0.1.x",<% } %>
+    "posthtml-retext": "0.1.x",
+    "retext-smartypants": "1.x",
     "rucksack-css": "0.8.x",
-    "spike-util": "^0.2.1",
     "sugarss": "0.1.x"<% if (production) { %>,
     "webpack": "1.13.x"<% } %>
   },
