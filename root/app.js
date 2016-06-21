@@ -33,6 +33,5 @@ module.exports = {
     }
   },
   babel: { presets: [es2015, stage2] },
-  locals: { foo: 'bar' },
   ignore: ['**/layout.jade', '**/_*', '**/.*']
 }
