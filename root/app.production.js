@@ -1,5 +1,7 @@
-const Util = require('spike-util')
 const jade = require('posthtml-jade')
+const md = require('posthtml-md')
+const retext = require('posthtml-retext')
+const smartypants = require('retext-smartypants')
 const minifyHtml = require('posthtml-minifier')
 const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
@@ -27,10 +29,11 @@ module.exports = {
   },
   // adds html minification plugin
   posthtml: (ctx) => {
-    const f = Util.filePathFromLoader(ctx).absolute
     return {
       defaults: [
-        jade({ filename: f, pretty: true }),
+        jade({ filename: ctx.resourcePath, pretty: true, foo: 'bar' }),
+        md(),
+        retext([smartypants]),
         minifyHtml({ collapseWhitespace: true, removeComments: true })
       ]
     }
