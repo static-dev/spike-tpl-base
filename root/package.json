@@ -13,15 +13,19 @@
     <% if (production) { %>"cssnano": "3.x",<% } %>
     <% if (production) { %>"image-webpack-loader": "1.x",<% } %>
     "lost": "6.x",
+    "markdown-it": "6.x",
     "postcss-cssnext": "2.6.x",
     "postcss-import": "8.x",
-    "posthtml-jade": "0.8.x",
-    "posthtml-md": "1.x",
+    "posthtml-content": "0.0.1",
+    "posthtml-exp": "0.9.x",
+    "posthtml-extend": "0.1.x",
+    "posthtml-include": "1.x",
     <% if (production) { %>"posthtml-minifier": "0.1.x",<% } %>
     "posthtml-retext": "0.1.x",
     "retext-smartypants": "1.x",
     "rucksack-css": "0.8.x",
-    "sugarss": "0.1.x"<% if (production) { %>,
+    "sugarss": "0.1.x",
+    "sugarml": "0.0.1"<% if (production) { %>,
     "webpack": "1.13.x"<% } %>
   },
   "devDependencies": {
