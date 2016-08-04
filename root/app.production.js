@@ -30,7 +30,7 @@ module.exports = {
   // adds html minification plugin
   posthtml: (ctx) => {
     return {
-      defaults: [
+      plugins: [
         jade({ filename: ctx.resourcePath, pretty: true, foo: 'bar' }),
         md(),
         retext([smartypants]),
