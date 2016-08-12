@@ -1,18 +1,16 @@
 const sugarml = require('sugarml')
-const expressions = require('posthtml-exp')
-const content = require('posthtml-content')
-const extend = require('posthtml-extend')
-const include = require('posthtml-include')
-const md = require('markdown-it')
-const retext = require('posthtml-retext')
+const expressions = require('reshape-expressions')
+const content = require('reshape-content')
+const layouts = require('reshape-layouts')
+const include = require('reshape-include')
+const Markdown = require('markdown-it')
+const retext = require('reshape-retext')
 const smartypants = require('retext-smartypants')
-const minifyHtml = require('posthtml-minifier')
 
 const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
 const cssnext = require('postcss-cssnext')
 const rucksack = require('rucksack-css')
-const lost = require('lost')
 const cssnano = require('cssnano')
 
 const webpack = require('webpack')
@@ -33,17 +31,18 @@ module.exports = {
   module: {
     loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }]
   },
-  // adds html minification plugin
-  posthtml: (ctx) => {
+  // TODO add html minification plugin
+  reshape: (ctx) => {
+    const md = new Markdown(/* markdown-it plugins here */)
     return {
       parser: sugarml,
+      locals: { foo: 'bar' },
       plugins: [
-        expressions({ locals: { foo: 'bar' } }),
+        expressions(),
         content({ md: md.renderInline.bind(md) }),
-        extend({ root: ctx.resourcePath }),
-        include({ root: ctx.resourcePath, addDependencyTo: ctx }),
-        retext([smartypants]),
-        minifyHtml({ collapseWhitespace: true, removeComments: true })
+        layouts({ addDependencyTo: ctx }),
+        include({ addDependencyTo: ctx })
+        // retext([smartypants]) not currently working
       ]
     }
   },
@@ -55,7 +54,6 @@ module.exports = {
         postcssImport({ addDependencyTo: ctx }),
         cssnext({ warnForDuplicates: false }),
         rucksack(),
-        lost(),
         cssnano()
       ]
     }
