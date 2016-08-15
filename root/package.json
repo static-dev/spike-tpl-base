@@ -28,11 +28,11 @@
     "webpack": "1.13.x"<% } %>
   },
   "devDependencies": {
-    "ava": "0.15.x",
-    "rimraf": "2.5.x",
-    "snazzy": "4.x",
-    "spike-core": "0.9.x",
-    "standard": "7.x"
+    "ava": "^0.16.0",
+    "rimraf": "^2.5.4",
+    "snazzy": "^4.0.1",
+    "spike-core": "^0.11.0",
+    "standard": "^7.1.2"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",

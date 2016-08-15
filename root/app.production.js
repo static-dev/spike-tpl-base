@@ -37,6 +37,7 @@ module.exports = {
     return {
       parser: sugarml,
       locals: { foo: 'bar' },
+      filename: ctx.resourcePath,
       plugins: [
         expressions(),
         content({ md: md.renderInline.bind(md) }),
