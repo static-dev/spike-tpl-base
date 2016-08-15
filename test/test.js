@@ -14,6 +14,13 @@ test.cb.before((t) => {
   rimraf(tplTestPath, () => { t.end() })
 })
 
+test.only('compile test', (t) => {
+  const project = new Spike({ root: tplTestPath })
+  project.on('error', console.error)
+  project.on('compile', () => console.log('done!'))
+  project.compile()
+})
+
 test('initializes with sprout, compiles with spike', t => {
   const tplName = 'spike-tpl-base-test'
   const locals = { name: 'doge', description: 'wow', github_username: 'amaze', production: false }
@@ -36,12 +43,12 @@ test('initializes with sprout, compiles with spike', t => {
       })
     })
     .then(() => { t.is(true, true) })
-    .finally(() => {
-      return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
-    })
+    // .finally(() => {
+    //   return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
+    // })
 })
 
-test.only('compiles with production setting', t => {
+test('compiles with production setting', t => {
   const tplName = 'spike-tpl-base-production-test'
   const locals = { name: 'doge', description: 'wow', github_username: 'amaze', production: true }
   const sprout = new Sprout(tmpdir())
@@ -63,9 +70,9 @@ test.only('compiles with production setting', t => {
       })
     })
     .then(() => { t.is(true, true) })
-    .finally(() => {
-      return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
-    })
+    // .finally(() => {
+    //   return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
+    // })
 })
 
 function npmInstall (dir) {

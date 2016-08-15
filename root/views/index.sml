@@ -1,0 +1,29 @@
+extends(src='layout.sml')
+  block(name='content')
+    h2 Hello World!
+    p Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
+    p Example of locals: {{ foo }}
+    p(md) Example of **markdown**
+    p Example of "smart quotes" -- and dashes
+
+    hr
+    
+    h3 Getting Started
+    h4 The Stack:
+    ul
+      li
+        a(href="http://github.com/reshape/reshape") reshape
+        |  for HTML transforms
+      li
+        a(href="https://babeljs.io/") babel
+        |  for JS transforms
+      li
+        a(href="http://postcss.org/") postcss
+        |  for CSS transforms
+      li
+        a(href="http://webpack.github.io") webpack
+        |  for JS bundling
+      
+    p Customize your settings by editing the 
+      a(href="https://github.com/static-dev/spike#appjs") app.js
+      |  file or simply start by editing this view

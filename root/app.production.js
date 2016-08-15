@@ -1,14 +1,18 @@
-const jade = require('posthtml-jade')
-const md = require('posthtml-md')
-const retext = require('posthtml-retext')
+const sugarml = require('sugarml')
+const expressions = require('reshape-expressions')
+const content = require('reshape-content')
+const layouts = require('reshape-layouts')
+const include = require('reshape-include')
+const Markdown = require('markdown-it')
+const retext = require('reshape-retext')
 const smartypants = require('retext-smartypants')
-const minifyHtml = require('posthtml-minifier')
+
 const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
 const cssnext = require('postcss-cssnext')
 const rucksack = require('rucksack-css')
 const cssnano = require('cssnano')
-const lost = require('lost')
+
 const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 const DedupePlugin = webpack.optimize.DedupePlugin
@@ -27,23 +31,31 @@ module.exports = {
   module: {
     loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }]
   },
-  // adds html minification plugin
-  posthtml: (ctx) => {
+  // TODO add html minification plugin
+  reshape: (ctx) => {
+    const md = new Markdown(/* markdown-it plugins here */)
     return {
+      parser: sugarml,
+      locals: { foo: 'bar' },
       plugins: [
-        jade({ filename: ctx.resourcePath, pretty: true, foo: 'bar' }),
-        md(),
-        retext([smartypants]),
-        minifyHtml({ collapseWhitespace: true, removeComments: true })
+        expressions(),
+        content({ md: md.renderInline.bind(md) }),
+        layouts({ addDependencyTo: ctx }),
+        include({ addDependencyTo: ctx }),
+        retext(smartypants)
       ]
     }
   },
   // adds css minification plugin
   postcss: (ctx) => {
-    const atImport = postcssImport({ addDependencyTo: ctx })
     return {
-      plugins: [atImport, cssnext({ warnForDuplicates: false }), rucksack(), lost(), cssnano()],
-      parser: sugarss
+      parser: sugarss,
+      plugins: [
+        postcssImport({ addDependencyTo: ctx }),
+        cssnext({ warnForDuplicates: false }),
+        rucksack(),
+        cssnano()
+      ]
     }
   }
 }

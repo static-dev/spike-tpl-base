@@ -9,19 +9,22 @@
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
     "babel-preset-es2015": "6.x",
-    "babel-preset-stage-2": "6.x",
-    <% if (production) { %>"cssnano": "3.x",<% } %>
-    <% if (production) { %>"image-webpack-loader": "1.x",<% } %>
+    "babel-preset-stage-2": "6.x",<% if (production) { %>
+    "cssnano": "3.x",<% } %><% if (production) { %>
+    "image-webpack-loader": "1.x",<% } %>
     "lost": "6.x",
+    "markdown-it": "6.x",
     "postcss-cssnext": "2.6.x",
     "postcss-import": "8.x",
-    "posthtml-jade": "0.8.x",
-    "posthtml-md": "1.x",
-    <% if (production) { %>"posthtml-minifier": "0.1.x",<% } %>
-    "posthtml-retext": "0.1.x",
-    "retext-smartypants": "1.x",
-    "rucksack-css": "0.8.x",
-    "sugarss": "0.1.x"<% if (production) { %>,
+    "reshape-content": "^0.1.1",
+    "reshape-expressions": "^0.1.0",
+    "reshape-layouts": "^0.2.1",
+    "reshape-include": "^0.1.0",
+    "reshape-retext": "^0.1.1",
+    "retext-smartypants": "^2.0.0",
+    "rucksack-css": "^0.8.0",
+    "sugarss": "^0.1.0",
+    "sugarml": "^0.2.0"<% if (production) { %>,
     "webpack": "1.13.x"<% } %>
   },
   "devDependencies": {
