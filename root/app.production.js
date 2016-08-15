@@ -41,8 +41,8 @@ module.exports = {
         expressions(),
         content({ md: md.renderInline.bind(md) }),
         layouts({ addDependencyTo: ctx }),
-        include({ addDependencyTo: ctx })
-        // retext([smartypants]) not currently working
+        include({ addDependencyTo: ctx }),
+        retext(smartypants)
       ]
     }
   },
