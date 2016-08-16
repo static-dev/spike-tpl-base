@@ -23,6 +23,7 @@
     "reshape-retext": "^0.1.1",
     "retext-smartypants": "^2.0.0",
     "rucksack-css": "^0.8.0",
+    "spike-html-standards": "^0.1.0",
     "sugarss": "^0.1.0",
     "sugarml": "^0.2.0"<% if (production) { %>,
     "webpack": "1.13.x"<% } %>

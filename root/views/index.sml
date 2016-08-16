@@ -25,5 +25,5 @@ extends(src='layout.sml')
         |  for JS bundling
       
     p Customize your settings by editing the 
-      a(href="https://github.com/static-dev/spike#appjs") app.js
+      a(href="https://spike.readme.io/docs/appjs") app.js
       |  file or simply start by editing this view

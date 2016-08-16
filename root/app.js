@@ -1,10 +1,5 @@
-const sugarml = require('sugarml')
-const expressions = require('reshape-expressions')
-const content = require('reshape-content')
-const layouts = require('reshape-layouts')
-const include = require('reshape-include')
+const htmlStandards = require('spike-html-standards')
 const Markdown = require('markdown-it')
-const retext = require('reshape-retext')
 const smartypants = require('retext-smartypants')
 const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
@@ -23,18 +18,13 @@ module.exports = {
   },
   ignore: ['**/layout.sml', '**/_*', '**/.*'],
   reshape: (ctx) => {
-    return {
-      parser: sugarml,
+    return htmlStandards({
+      sugarml: true,
+      webpack: ctx,
       locals: { foo: 'bar' },
-      filename: ctx.resourcePath,
-      plugins: [
-        expressions(),
-        content({ md: md.renderInline.bind(md) }),
-        layouts({ addDependencyTo: ctx }),
-        include({ addDependencyTo: ctx }),
-        retext(smartypants)
-      ]
-    }
+      content: { md: md.renderInline.bind(md) },
+      retext: smartypants
+    })
   },
   postcss: (ctx) => {
     return {

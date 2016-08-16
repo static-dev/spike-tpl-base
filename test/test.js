@@ -14,7 +14,7 @@ test.cb.before((t) => {
   rimraf(tplTestPath, () => { t.end() })
 })
 
-test.only('compile test', (t) => {
+test.skip('compile test', (t) => {
   const project = new Spike({ root: tplTestPath })
   project.on('error', console.error)
   project.on('compile', () => console.log('done!'))

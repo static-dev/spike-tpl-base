@@ -1,22 +1,17 @@
-const sugarml = require('sugarml')
-const expressions = require('reshape-expressions')
-const content = require('reshape-content')
-const layouts = require('reshape-layouts')
-const include = require('reshape-include')
+const htmlStandards = require('spike-html-standards')
 const Markdown = require('markdown-it')
-const retext = require('reshape-retext')
 const smartypants = require('retext-smartypants')
-
 const sugarss = require('sugarss')
 const postcssImport = require('postcss-import')
 const cssnext = require('postcss-cssnext')
 const rucksack = require('rucksack-css')
 const cssnano = require('cssnano')
-
 const webpack = require('webpack')
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 const DedupePlugin = webpack.optimize.DedupePlugin
 const OccurrenceOrderPlugin = webpack.optimize.OccurrenceOrderPlugin
+
+const md = new Markdown(/* markdown-it config */)
 
 module.exports = {
   // disable source maps
@@ -33,19 +28,13 @@ module.exports = {
   },
   // TODO add html minification plugin
   reshape: (ctx) => {
-    const md = new Markdown(/* markdown-it plugins here */)
-    return {
-      parser: sugarml,
+    return htmlStandards({
+      sugarml: true,
+      webpack: ctx,
       locals: { foo: 'bar' },
-      filename: ctx.resourcePath,
-      plugins: [
-        expressions(),
-        content({ md: md.renderInline.bind(md) }),
-        layouts({ addDependencyTo: ctx }),
-        include({ addDependencyTo: ctx }),
-        retext(smartypants)
-      ]
-    }
+      content: { md: md.renderInline.bind(md) },
+      retext: smartypants
+    })
   },
   // adds css minification plugin
   postcss: (ctx) => {
