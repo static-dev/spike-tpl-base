@@ -15,8 +15,9 @@ html
     block(name='stylesheets')
       link(rel='stylesheet' href='css/index.css')
 
-  body
-    block(name='content')
+  body(role='document')
+    main(role='main')
+      block(name='content')
 
     block(name='javascript')
       script(src='js/main.js')
