@@ -18,11 +18,12 @@ module.exports = {
   module: {
     loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }]
   },
-  // TODO add html minification plugin
+  // adds html minification plugin
   reshape: (ctx) => {
     return htmlStandards({
       webpack: ctx,
-      locals: { foo: 'bar' }
+      locals: { foo: 'bar' },
+      minify: true
     })
   },
   // adds css minification plugin
