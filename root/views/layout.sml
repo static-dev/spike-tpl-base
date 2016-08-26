@@ -1,6 +1,5 @@
 doctype html
 html
-
   head
     block(name='meta')
       meta(charset='utf-8')
