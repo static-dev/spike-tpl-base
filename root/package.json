@@ -11,15 +11,15 @@
     "babel-preset-latest": "^6.14.0",<% if (production) { %>
     "image-webpack-loader": "^2.0.0",<% } %>
     "spike-css-standards": "^0.1.0",
-    "spike-html-standards": "^0.3.3"<% if (production) { %>,
+    "spike-html-standards": "^0.3.5"<% if (production) { %>,
     "webpack": "^1.13.1"<% } %>
   },
   "devDependencies": {
     "ava": "^0.16.0",
     "rimraf": "^2.5.4",
     "snazzy": "^4.0.1",
-    "spike-core": "^0.11.0",
-    "standard": "^7.1.2"
+    "spike-core": "^0.11.2",
+    "standard": "^8.0.0"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",
