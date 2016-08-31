@@ -5,7 +5,7 @@ const latest = require('babel-preset-latest')
 module.exports = {
   devtool: 'source-map',
   matchers: {
-    html: '**/*.sml',
+    html: '**/*.sgr',
     css: '**/*.sss'
   },
   ignore: ['**/layout.sml', '**/_*', '**/.*'],
