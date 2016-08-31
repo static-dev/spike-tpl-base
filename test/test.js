@@ -43,9 +43,9 @@ test('initializes with sprout, compiles with spike', t => {
       })
     })
     .then(() => { t.is(true, true) })
-    // .finally(() => {
-    //   return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
-    // })
+    .finally(() => {
+      return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
+    })
 })
 
 test('compiles with production setting', t => {
