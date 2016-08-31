@@ -1,4 +1,4 @@
-extends(src='layout.sml')
+extends(src='layout.sgr')
   block(name='content')
     h2 Hello World!
     p Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
@@ -7,7 +7,7 @@ extends(src='layout.sml')
     p Example of "smart quotes" -- and dashes
 
     hr
-    
+
     h3 Getting Started
     h4 The Stack:
     ul
@@ -23,7 +23,7 @@ extends(src='layout.sml')
       li
         a(href="http://webpack.github.io") webpack
         |  for JS bundling
-      
-    p Customize your settings by editing the 
+
+    p Customize your settings by editing the
       a(href="https://spike.readme.io/docs/appjs") app.js
       |  file or simply start by editing this view
