@@ -5,7 +5,8 @@
   "author": "Carrot Creative",
   "ava": {
     "verbose": "true",
-    "serial": "true"
+    "serial": "true",
+    "files": "test/test.js"
   },
   "bugs": "https://github.com/static-dev/spike-tpl-base/issues",
   "devDependencies": {

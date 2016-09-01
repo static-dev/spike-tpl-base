@@ -10,12 +10,12 @@ const {exec} = require('child_process')
 
 const tplTestPath = path.join(__dirname, 'example')
 
-test.cb.before((t) => {
+test.cb.afterEach((t) => {
   rimraf(tplTestPath, () => { t.end() })
 })
 
 test.skip('compile test', (t) => {
-  const project = new Spike({ root: tplTestPath })
+  const project = new Spike({ root: tplTestPath, env: 'production' })
   project.on('error', console.error)
   project.on('compile', () => console.log('done!'))
   project.compile()
@@ -44,7 +44,7 @@ test('initializes with sprout, compiles with spike', t => {
     })
     .then(() => { t.is(true, true) })
     .finally(() => {
-      return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
+      return sprout.remove.bind(sprout, tplName)
     })
 })
 
@@ -70,9 +70,9 @@ test('compiles with production setting', t => {
       })
     })
     .then(() => { t.is(true, true) })
-    // .finally(() => {
-    //   return rimraf(tplTestPath).then(sprout.remove.bind(sprout, tplName))
-    // })
+    .finally(() => {
+      return sprout.remove.bind(sprout, tplName)
+    })
 })
 
 function npmInstall (dir) {
