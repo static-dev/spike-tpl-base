@@ -15,7 +15,7 @@ html
       link(rel='stylesheet' href='css/index.css')
 
   body(role='document')
-    main(role='main')
+    main(role='main' id='{{ pageId }}')
       block(name='content')
 
     block(name='javascript')
