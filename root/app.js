@@ -1,6 +1,6 @@
-const htmlStandards = require('spike-html-standards')
+const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
-const latest = require('babel-preset-latest')
+const jsStandards = require('babel-preset-latest')
 const pageId = require('spike-page-id')
 
 module.exports = {
@@ -19,5 +19,5 @@ module.exports = {
   postcss: (ctx) => {
     return cssStandards({ webpack: ctx })
   },
-  babel: { presets: [latest] }
+  babel: { presets: [jsStandards] }
 }

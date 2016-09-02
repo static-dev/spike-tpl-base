@@ -10,8 +10,8 @@
   "dependencies": {
     "babel-preset-latest": "^6.14.0",<% if (production) { %>
     "image-webpack-loader": "^2.0.0",<% } %>
+    "reshape-standard": "^0.1.0",
     "spike-css-standards": "^0.1.1",
-    "spike-html-standards": "^0.3.7",
     "spike-page-id": "^0.1.0"<% if (production) { %>,
     "webpack": "^1.13.1"<% } %>
   },
