@@ -6,8 +6,8 @@ const pageId = require('spike-page-id')
 module.exports = {
   devtool: 'source-map',
   matchers: {
-    html: '**/*.sgr',
-    css: '**/*.sss'
+    html: '*(**/)*.sgr',
+    css: '*(**/)*.sss'
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*'],
   reshape: (ctx) => {
