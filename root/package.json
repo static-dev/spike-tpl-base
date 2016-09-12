@@ -8,7 +8,8 @@
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "babel-preset-latest": "^6.14.0",<% if (production) { %>
+    "babel-preset-latest": "^6.14.0",
+    "hard-source-webpack-plugin": "0.0.38",<% if (production) { %>
     "image-webpack-loader": "^2.0.0",<% } %>
     "reshape-standard": "^0.1.0",
     "spike-css-standards": "^0.1.1",

@@ -17,6 +17,7 @@ test.cb.afterEach((t) => {
 test.skip('compile test', (t) => {
   const project = new Spike({ root: tplTestPath, env: 'production' })
   project.on('error', console.error)
+  project.on('warning', console.error)
   project.on('compile', () => console.log('done!'))
   project.compile()
 })
