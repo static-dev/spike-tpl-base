@@ -14,7 +14,7 @@ module.exports = {
   ],
   // image optimization
   module: {
-    loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'source-loader!image-webpack' }]
+    loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }]
   },
   // adds html minification plugin
   reshape: (ctx) => {
