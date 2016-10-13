@@ -13,8 +13,8 @@
     "image-webpack-loader": "^2.0.0",<% } %>
     "reshape-standard": "^0.4.0",
     "spike-css-standards": "^0.1.1",
-    "spike-page-id": "^0.1.0"<% if (production) { %>,
-    "webpack": "^1.13.1"<% } %>
+    "spike-page-id": "^0.1.0",
+    "webpack": "^1.13.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",
