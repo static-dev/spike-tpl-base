@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",
-  "private": "true",
+  "private": true,
   "repository": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "scripts": {
     "lint": "standard | snazzy",
