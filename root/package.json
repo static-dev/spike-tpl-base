@@ -20,7 +20,7 @@
     "ava": "^0.17.0",
     "rimraf": "^2.5.4",
     "snazzy": "^5.0.0",
-    "spike-core": "^0.12.3",
+    "spike-core": "^0.13.0",
     "standard": "^8.6.0"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
