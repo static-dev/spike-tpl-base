@@ -1,7 +1,7 @@
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const pageId = require('spike-page-id')
-const {UglifyJsPlugin, DedupePlugin, OccurrenceOrderPlugin} = require('webpack').optimize
+const {UglifyJsPlugin, DedupePlugin} = require('webpack').optimize
 
 module.exports = {
   // disable source maps
@@ -9,27 +9,26 @@ module.exports = {
   // webpack optimization and minfication plugins
   plugins: [
     new UglifyJsPlugin(),
-    new DedupePlugin(),
-    new OccurrenceOrderPlugin()
+    new DedupePlugin()
   ],
   // image optimization
   module: {
-    loaders: [{ test: /\.(jpe?g|png|gif|svg)$/i, loader: 'image-webpack' }]
+    rules: [{
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      use: [{ loader: 'image-webpack' }]
+    }]
   },
   // adds html minification plugin
-  reshape: (ctx) => {
-    return htmlStandards({
-      webpack: ctx,
-      locals: { pageId: pageId(ctx), foo: 'bar' },
-      minify: true
-    })
-  },
+  // TODO separate the minify plugins, add here manually, don't repeat standards
+  reshape: htmlStandards({
+    webpack: true,
+    locals: (ctx) => { return { pageId: pageId(ctx) } },
+    minify: true
+  }),
   // adds css minification plugin
-  postcss: (ctx) => {
-    return cssStandards({
-      webpack: ctx,
-      minify: true,
-      warnForDuplicates: false // cssnano includes autoprefixer
-    })
-  }
+  postcss: cssStandards({
+    webpack: true,
+    minify: true,
+    warnForDuplicates: false // cssnano includes autoprefixer
+  })
 }

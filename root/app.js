@@ -12,15 +12,11 @@ module.exports = {
     css: '*(**/)*.sss'
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md'],
-  reshape: (ctx) => {
-    return htmlStandards({
-      webpack: ctx,
-      locals: { pageId: pageId(ctx), foo: 'bar' }
-    })
-  },
-  postcss: (ctx) => {
-    return cssStandards({ webpack: ctx })
-  },
+  reshape: htmlStandards({
+    webpack: true,
+    locals: (ctx) => { return { pageId: pageId(ctx) } }
+  }),
+  postcss: cssStandards({ webpack: true }),
   babel: { presets: [jsStandards] },
   plugins: [
     new HardSourcePlugin({
