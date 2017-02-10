@@ -2,7 +2,7 @@ const path = require('path')
 const HardSourcePlugin = require('hard-source-webpack-plugin')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
-const jsStandards = require('babel-preset-latest').buildPreset
+const jsStandards = require('babel-preset-es2015-node6').buildPreset
 const pageId = require('spike-page-id')
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
   },
   ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    locals: (ctx) => { return { pageId: pageId(ctx) } }
+    locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } }
   }),
   postcss: cssStandards(),
   babel: { presets: [[jsStandards, { modules: false }]] },
