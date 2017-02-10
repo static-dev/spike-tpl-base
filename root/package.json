@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "babel-preset-es2015-node6": "^0.4.0",
+    "babel-preset-env": "^1.1.8",
     "hard-source-webpack-plugin": "0.3.8",<% if (production) { %>
     "image-webpack-loader": "^3.1.0",<% } %>
     "reshape-standard": "next",
