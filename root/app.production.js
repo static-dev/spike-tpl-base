@@ -1,5 +1,3 @@
-const reshapeMinify = require('reshape-minify')
-const cssnano = require('cssnano')
 const OfflinePlugin = require('offline-plugin')
 const {UglifyJsPlugin, DedupePlugin} = require('webpack').optimize
 
@@ -20,9 +18,9 @@ module.exports = {
     }]
   },
   // minify html and css
-  reshape: { plugins: [reshapeMinify()] },
+  reshape: { minify: true },
   postcss: {
-    plugins: [cssnano()],
+    minify: true,
     warnForDuplicates: false // cssnano includes autoprefixer
   }
 }

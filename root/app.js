@@ -2,7 +2,7 @@ const path = require('path')
 const HardSourcePlugin = require('hard-source-webpack-plugin')
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
-const jsStandards = require('babel-preset-latest')
+const jsStandards = require('babel-preset-latest').buildPreset
 const pageId = require('spike-page-id')
 
 module.exports = {
@@ -11,13 +11,12 @@ module.exports = {
     html: '*(**/)*.sgr',
     css: '*(**/)*.sss'
   },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md'],
+  ignore: ['**/layout.sgr', '**/_*', '**/.*', '_cache/**', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
-    webpack: true,
     locals: (ctx) => { return { pageId: pageId(ctx) } }
   }),
-  postcss: cssStandards({ webpack: true }),
-  babel: { presets: [jsStandards] },
+  postcss: cssStandards(),
+  babel: { presets: [[jsStandards, { modules: false }]] },
   plugins: [
     new HardSourcePlugin({
       environmentPaths: { root: __dirname },
