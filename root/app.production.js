@@ -1,5 +1,5 @@
 const OfflinePlugin = require('offline-plugin')
-const {UglifyJsPlugin, DedupePlugin} = require('webpack').optimize
+const {UglifyJsPlugin} = require('webpack').optimize
 
 module.exports = {
   // disable source maps
@@ -7,7 +7,6 @@ module.exports = {
   // webpack optimization and service worker
   plugins: [
     new UglifyJsPlugin(),
-    new DedupePlugin(),
     new OfflinePlugin({ updateStrategy: 'all' })
   ],
   // image optimization
