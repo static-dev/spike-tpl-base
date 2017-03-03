@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "ava": "^0.17.0",
+    "offline-plugin": "^4.6.1",
     "rimraf": "^2.5.4",
     "snazzy": "^6.0.0",
     "spike-core": "^0.13.3",
