@@ -8,12 +8,11 @@
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-env": "^1.1.8",
     "reshape-standard": "^1.0.0",
     "spike-css-standards": "^1.0.0",
+    "spike-js-standards": "^1.0.0",
     "spike-page-id": "^1.0.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.3.3"
   },
   "devDependencies": {
     "ava": "^0.19.0",

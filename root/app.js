@@ -1,7 +1,6 @@
 const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
-const jsStandards = require('babel-preset-env')
-const dynamicImport = require('babel-plugin-syntax-dynamic-import')
+const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 
 module.exports = {
@@ -15,5 +14,5 @@ module.exports = {
     locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } }
   }),
   postcss: cssStandards(),
-  babel: { presets: [[jsStandards, { modules: false }]], plugins: [dynamicImport] }
+  babel: jsStandards
 }
