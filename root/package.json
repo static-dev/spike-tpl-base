@@ -10,7 +10,7 @@
   "dependencies": {
     "reshape-standard": "^1.0.0",
     "spike-css-standards": "^1.0.0",
-    "spike-js-standards": "^2.0.0",
+    "spike-js-standards": "^2.0.1",
     "spike-page-id": "^1.0.0",
     "webpack": "^2.3.3"
   },
