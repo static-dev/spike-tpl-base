@@ -2,7 +2,7 @@ const htmlStandards = require('reshape-standard')
 const cssStandards = require('spike-css-standards')
 const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
-const env = process.NODE_ENV
+const env = process.env.NODE_ENV
 
 module.exports = {
   devtool: 'source-map',
