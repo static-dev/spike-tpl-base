@@ -8,18 +8,18 @@
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "reshape-standard": "^1.0.0",
-    "spike-css-standards": "^1.0.0",
-    "spike-js-standards": "^2.0.1",
+    "reshape-standard": "^1.1.0",
+    "spike-css-standards": "^1.1.0",
+    "spike-js-standards": "^2.0.2",
     "spike-page-id": "^1.0.0",
-    "webpack": "^2.3.3"
+    "webpack": "^2.6.1",
+    "spike": "1.3.1"
   },
   "devDependencies": {
-    "ava": "^0.19.0",
-    "rimraf": "^2.6.0",
-    "snazzy": "^6.0.0",
-    "spike-core": "^1.0.0",
-    "standard": "^10.0.0"
+    "ava": "^0.19.1",
+    "rimraf": "^2.6.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
   },
   "homepage": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>",
   "main": "app.js",
@@ -29,6 +29,9 @@
     "lint": "standard | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",
-    "test": "NODE_ENV=test ava"
+    "test": "NODE_ENV=test ava",
+    "start": "spike watch",
+    "build": "spike compile",
+    "prod": "NODE_ENV=production spike compile -e production"
   }
 }
