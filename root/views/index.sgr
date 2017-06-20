@@ -1,9 +1,9 @@
 extends(src='layout.sgr')
   block(name='content')
     h2 Hello World!
-    p Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
+    p(retext-skip) Thanks for using <a href='https://github.com/static-dev/spike'>spike</a>
     p Example of locals: {{ foo }}
-    p(md) Example of **markdown**
+    p(mdi) Example of **markdown**
     p Example of "smart quotes" -- and dashes
 
     hr
