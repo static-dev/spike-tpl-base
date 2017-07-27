@@ -1,0 +1,22 @@
+<extends src='layout.html'>
+  <block name='content'>
+    <h2>Hello World!</h2>
+    <p>Thanks for using <a href='https://github.com/static-dev/spike'>spike</a></p>
+    <p>Example of locals: {{ foo }}</p>
+    <p mdi> Example of **markdown**</p>
+    <p>Example of "smart quotes" -- and dashes</p>
+
+    <hr>
+
+    <h3>Getting Started</h3>
+    <h4>The Stack:</h4>
+    <ul>
+      <li><a href="https://reshape.ml">reshape</a> for HTML transforms</li>
+      <li><a href="https://babeljs.io">babel</a> for JS transforms</li>
+      <li><a href="http://postcss.org">postcss</a> for CSS transforms</li>
+      <li><a href="http://webpack.github.io">webpack</a> for JS bundling</li>
+    </ul>
+
+    <p>Customize your settings by editing the <a href="https://spike.readme.io/docs/appjs">app.js</a> file or simply start by editing this view</p>
+  </block>
+</extends>
