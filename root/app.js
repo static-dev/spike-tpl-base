@@ -11,12 +11,12 @@ module.exports = {
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },<% } %>
   ignore: [<% if (sugar) { %>'**/layout.sgr'<% } else {%>'**/layout.html'<% } %>, '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({<% if (sugar) { %>
-    parser: sugarml, <% } %>
+    parser: sugarml,<% } %>
     locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } },
     minify: env === 'production'
   }),
   postcss: cssStandards({<% if (sugar) { %>
-    parser: sugarss, <% } %>
+    parser: sugarss,<% } %>
     minify: env === 'production',
     warnForDuplicates: env !== 'production'
   }),
