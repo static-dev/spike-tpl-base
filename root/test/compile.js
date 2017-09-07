@@ -18,5 +18,5 @@ test('compiles project with spike', (t) => {
     project.on('warning', reject)
     project.on('compile', resolve)
     project.compile()
-  })
+  }).then(() => { t.pass() }, (err) => { t.fail(err.message) })
 })
