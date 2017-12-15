@@ -9,7 +9,7 @@ const env = process.env.SPIKE_ENV
 module.exports = {
   devtool: 'source-map',<% if (sugar) { %>
   matchers: { html: '*(**/)*.sgr', css: '*(**/)*.sss' },<% } %>
-  ignore: [<% if (sugar) { %>'**/layout.sgr'<% } else {%>'**/layout.html'<% } %>, '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: [<% if (sugar) { %>'**/layout.sgr'<% } else {%>'**/layout.html'<% } %>, '**/_*', '**/.*', 'readme.md', 'yarn.lock', 'package-lock.json'],
   reshape: htmlStandards({<% if (sugar) { %>
     parser: sugarml,<% } %>
     locals: (ctx) => { return { pageId: pageId(ctx), foo: 'bar' } },
