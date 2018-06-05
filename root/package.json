@@ -8,14 +8,14 @@
   },
   "bugs": "https://github.com/<%= github_username %>/<%= S(name).slugify().value() %>/issues",
   "dependencies": {
-    "reshape-standard": "^3.0.0",
-    "spike-css-standards": "^3.0.0",
+    "reshape-standard": "^3.3.0",
+    "spike-css-standards": "^4.0.0",
     "spike-js-standards": "^2.0.2",
     "spike-optimize": "^0.1.2",
-    "spike-page-id": "^1.0.0",
-    "spike": "^2.0.0"<% if (sugar) { %>,
+    "spike-page-id": "^1.1.0",
+    "spike": "^2.2.1"<% if (sugar) { %>,
     "sugarml": "^0.6.0",
-    "sugarss": "^1.0.0"<% } %>
+    "sugarss": "^1.0.1"<% } %>
   },
   "devDependencies": {
     "ava": "^0.19.1",
