@@ -13,8 +13,8 @@
     "spike-js-standards": "^2.1.0",
     "spike-optimize": "^0.1.2",
     "spike-page-id": "^1.1.0",
-    "spike": "^2.2.1"<% if (sugar) { %>,
-    "sugarml": "^0.6.0",
+    "spike": "^2.3.0"<% if (sugar) { %>,
+    "sugarml": "^0.7.0",
     "sugarss": "^1.0.1"<% } %>
   },
   "devDependencies": {
