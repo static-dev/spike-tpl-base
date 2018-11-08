@@ -11,7 +11,7 @@
   "bugs": "https://github.com/static-dev/spike-tpl-base/issues",
   "devDependencies": {
     "ava": "^0.20.0",
-    "os-tmpdir": "^1.0.1",
+    "os-tmpdir": "^2.0.0",
     "rmfr": "^1.0.2",
     "spike-core": "^2.0.0",
     "sprout": "^1.2.1",
