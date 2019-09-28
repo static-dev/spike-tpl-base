@@ -12,7 +12,7 @@
   "devDependencies": {
     "ava": "^0.20.0",
     "os-tmpdir": "^1.0.1",
-    "rmfr": "^1.0.2",
+    "rmfr": "^2.0.0",
     "spike-core": "^2.0.0",
     "sprout": "^1.2.1",
     "when": "^3.7.7"
